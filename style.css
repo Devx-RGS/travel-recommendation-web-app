@@ -14,7 +14,7 @@ nav{
 nav a{
     color:white;
     text-decoration:none;
-    margin:0 18px;
+    margin:0 12px;
     font-size:17px;
 }
 
@@ -22,20 +22,53 @@ nav a:hover{
     text-decoration:underline;
 }
 
-.hero{
-    background:white;
-    margin:30px auto;
-    padding:40px;
-    width:80%;
-    border-radius:8px;
+nav input{
+    padding:10px;
+    width:220px;
+    border:none;
+    border-radius:4px;
+    margin-left:10px;
+}
+
+nav button{
+    padding:10px 14px;
+    margin-left:6px;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+    background:#2563eb;
+    color:white;
+}
+
+nav button:hover{
+    background:#1d4ed8;
 }
 
 section{
     background:white;
-    width:80%;
-    margin:25px auto;
+    width:85%;
+    margin:30px auto;
     padding:30px;
     border-radius:8px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+h1{
+    margin-bottom:25px;
+}
+
+h3{
+    margin-top:25px;
+    margin-bottom:10px;
+}
+
+img{
+    width:320px;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+    margin:10px;
 }
 
 input, textarea{
@@ -43,6 +76,10 @@ input, textarea{
     padding:12px;
     border:1px solid #ccc;
     border-radius:4px;
+}
+
+textarea{
+    resize:vertical;
 }
 
 button{
