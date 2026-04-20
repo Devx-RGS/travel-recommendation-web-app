@@ -3,35 +3,72 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Travel Guide</title>
+<title>Travel Recommendation</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <nav>
-<a href="index.html">Home</a>
-<a href="about.html">About Us</a>
-<a href="contact.html">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
 
-<input type="text" placeholder="beach">
-<button>Search</button>
-<button>Clear</button>
+    <input type="text" id="search" placeholder="Search here">
+    <button onclick="showPlaces()">Search</button>
+    <button onclick="clearData()">Clear</button>
 </nav>
 
 <section>
-<h1>Beach Recommendations</h1>
+    <h1>Travel Recommendation Website</h1>
+    <p>Search for beaches, temples or countries.</p>
 
-<div>
-<h3>Bora Bora Beach</h3>
-<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400">
-</div>
-
-<div>
-<h3>Maldives Beach</h3>
-<img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=400">
-</div>
-
+    <div id="result"></div>
 </section>
+
+<script>
+function showPlaces() {
+
+    let text = document.getElementById("search").value.toLowerCase();
+    let output = document.getElementById("result");
+
+    if (text == "beach") {
+        output.innerHTML =
+        "<h2>Beach Places</h2>" +
+        "<h3>Bora Bora Beach</h3>" +
+        "<img src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400'>" +
+        "<h3>Maldives Beach</h3>" +
+        "<img src='https://images.unsplash.com/photo-1519046904884-53103b34b206?w=400'>";
+    }
+
+else if (text == "temple") {
+    output.innerHTML =
+    "<h2>Temple Places</h2>" +
+    "<h3>Golden Temple</h3>" +
+    "<img src='https://images.unsplash.com/photo-1609947017136-9daf32a5eb16?w=400'>" +
+    "<h3>Angkor Wat</h3>" +
+    "<img src='https://lh3.googleusercontent.com/gps-cs-s/APNQkAHj8Pla7ZJrYWZvTeXRIK34pVAwqmAEeuNjoamzTQzHbWGLMSTn807ueALoyXaw7EG6U6ZRlQQHLZv3KwgRqtr1F6LuNXNtAuRMmVIzyrhEkCfmmeHP4bIapyKt6nQ8ZNjQZQYs=s1360-w1360-h1020-rw'>";
+}
+
+    else if (text == "country") {
+        output.innerHTML =
+        "<h2>Country Places</h2>" +
+        "<h3>Japan</h3>" +
+        "<img src='https://images.unsplash.com/photo-1492571350019-22de08371fd3?w=400'>" +
+        "<h3>Switzerland</h3>" +
+        "<img src='https://images.unsplash.com/photo-1527668752968-14dc70a27c95?w=400'>";
+    }
+
+    else {
+        output.innerHTML = "<p>No result found</p>";
+    }
+}
+
+function clearData() {
+    document.getElementById("search").value = "";
+    document.getElementById("result").innerHTML = "";
+}
+</script>
 
 </body>
 </html>
