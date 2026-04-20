@@ -1,0 +1,59 @@
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f6f8;
+    color:#222;
+}
+
+nav{
+    background:#1f2937;
+    padding:16px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 18px;
+    font-size:17px;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+.hero{
+    background:white;
+    margin:30px auto;
+    padding:40px;
+    width:80%;
+    border-radius:8px;
+}
+
+section{
+    background:white;
+    width:80%;
+    margin:25px auto;
+    padding:30px;
+    border-radius:8px;
+}
+
+input, textarea{
+    width:70%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:4px;
+}
+
+button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
